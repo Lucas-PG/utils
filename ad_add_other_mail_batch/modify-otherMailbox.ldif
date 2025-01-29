@@ -1,0 +1,4 @@
+dn: CN=Teste Usuario 1,OU=Users,OU=CMC,DC=cmc,DC=local 
+changetype: modify
+add: otherMailbox
+otherMailbox: teste.usuario1@gmail.com
