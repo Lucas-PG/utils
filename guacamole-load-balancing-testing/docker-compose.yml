@@ -12,8 +12,8 @@ services:
     depends_on:
       - guacamole1
       - guacamole2
-    networks:
-      - guacnetwork
+    # networks:
+    #   - guacnetwork
 
   guacamole1:
     image: guacamole/guacamole:latest
