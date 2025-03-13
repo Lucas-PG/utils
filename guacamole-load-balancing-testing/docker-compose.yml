@@ -12,8 +12,8 @@ services:
     depends_on:
       - guacamole1
       - guacamole2
-    # networks:
-    #   - guacnetwork
+    networks:
+      - guacnetwork
 
   guacamole1:
     image: guacamole/guacamole:latest
@@ -27,8 +27,8 @@ services:
     depends_on:
       - guacd
       - postgres
-    # networks:
-    #   - guacnetwork
+    networks:
+      - guacnetwork
 
   guacamole2:
     image: guacamole/guacamole:latest
@@ -42,14 +42,14 @@ services:
     depends_on:
       - guacd
       - postgres
-    # networks:
-    #   - guacnetwork
+    networks:
+      - guacnetwork
 
   guacd:
     image: guacamole/guacd:latest
     container_name: guacd
-    # networks:
-    #   - guacnetwork
+    networks:
+      - guacnetwork
 
   postgres:
     image: postgres:latest
@@ -60,8 +60,8 @@ services:
       POSTGRES_PASSWORD: your_password
     volumes:
       - ./init:/docker-entrypoint-initdb.d
-    # networks:
-    #   - guacnetwork
-# networks:
-#   guacnetwork:
-#     driver: bridge
+    networks:
+      - guacnetwork
+networks:
+  guacnetwork:
+    driver: bridge
