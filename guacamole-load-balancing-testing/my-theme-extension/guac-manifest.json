@@ -1,0 +1,10 @@
+{
+  "guacamoleVersion": "1.5.5",
+  "name": "My Custom Theme",
+  "namespace": "guac-theme",
+  "css": ["styles/theme.css"],
+  "resources": {
+    "images/logo.png": "image/png"
+  },
+  "translations": ["translations/en.json"]
+}

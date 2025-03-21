@@ -24,6 +24,10 @@ services:
       POSTGRES_DATABASE: guacamole_db
       POSTGRES_USER: guacamole_user
       POSTGRES_PASSWORD: your_password
+      GUACAMOLE_HOME: /home/guacamole/.guacamole
+    user: "0:0"
+    volumes:
+      - ./my-theme-extension/guac-theme.jar:/home/guacamole/.guacamole/extensions/guac-theme.jar
     depends_on:
       - guacd
       - postgres
@@ -39,6 +43,10 @@ services:
       POSTGRES_DATABASE: guacamole_db
       POSTGRES_USER: guacamole_user
       POSTGRES_PASSWORD: your_password
+      GUACAMOLE_HOME: /home/guacamole/.guacamole
+    user: "0:0"
+    volumes:
+      - ./my-theme-extension/guac-theme.jar:/home/guacamole/.guacamole/extensions/guac-theme.jar
     depends_on:
       - guacd
       - postgres
